@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividades Interactivas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header, footer {
+      width: 100%;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    header {
+      background-color: #B4CFCB;
+    }
+
+    nav {
+      background-color: #CAE3E2;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #2c6e6f;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    h2 {
+      color: #2c6e6f;
+    }
+
+    main {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .actividad {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2c6e6f;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1f4c4d;
+    }
+
+    .drag-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .draggable, .dropzone {
+      padding: 12px 20px;
+      border: 2px dashed #2c6e6f;
+      border-radius: 8px;
+      background-color: #fdfefe;
+      cursor: grab;
+      text-align: center;
+      min-width: 160px;
+      transition: all 0.3s ease;
+    }
+
+    .correcto {
+      border-color: green !important;
+      background-color: #d4edda !important;
+    }
+
+    p {
+      text-align: center;
+      font-size: 16px;
+    }
+
+    #puntajeFinal {
+      font-weight: bold;
+      font-size: 18px;
+      color: #2c6e6f;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #2c6e6f; /* color oscuro */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Actividades Interactivas</h1>
+    <h2>Proyecto de Biología - 9° Grado</h2>
+  </header>
+
+  <nav>
+    <a href="#act1">Actividades</a>
+  </nav>
+
+  <main>
+    <!-- Actividad 1 -->
+    <div class="actividad" id="act1">
+      <h2>Actividad 1: Vitaminas</h2>
+      <p>¿Cuál vitamina es importante para la visión?</p>
+      <button onclick="verificar('A')">Vitamina A</button>
+      <button onclick="verificar('C')">Vitamina C</button>
+      <button onclick="verificar('D')">Vitamina D</button>
+      <p id="resultado1"></p>
+    </div>
+
+    <!-- Actividad 2 -->
+    <div class="actividad" id="act2">
+      <h2>Actividad 2: Arrastra y suelta</h2>
+      <p>Arrastra la palabra "ADN" hacia su función principal.</p>
+      <div class="drag-container">
+        <div class="draggable" draggable="true" id="adn">ADN</div>
+        <div class="dropzone" id="zonaADN">Guardar información genética</div>
+      </div>
+      <p id="resultado2"></p>
+    </div>
+
+    <!-- Actividad 3 -->
+    <div class="actividad" id="act3">
+      <h2>Actividad 3: ARN</h2>
+      <p>¿Cuál es la función principal del ARN mensajero?</p>
+      <button onclick="verificarARN('Transportar información genética del ADN a los ribosomas')">Transportar información genética del ADN a los ribosomas</button>
+      <button onclick="verificarARN('Producir energía')">Producir energía</button>
+      <p id="resultado3"></p>
+    </div>
+
+    <!-- Actividad 4 -->
+    <div class="actividad" id="act4">
+      <h2>Actividad 4: Relaciona</h2>
+      <p>Arrastra el concepto a su tipo correcto:</p>
+      <div class="drag-container">
+        <div class="draggable" draggable="true" id="info">Información genética</div>
+        <div class="draggable" draggable="true" id="mensajero">Mensajero</div>
+      </div>
+      <div class="drag-container">
+        <div class="dropzone" id="zonaInfo">ADN</div>
+        <div class="dropzone" id="zonaMensajero">ARN</div>
+      </div>
+      <p id="resultado4"></p>
+    </div>
+
+    <!-- Actividad 5 -->
+    <div class="actividad" id="act5">
+      <h2>Actividad 5: Evaluación</h2>
+      <p>El ADN y el ARN son ácidos nucleicos, pero el ADN tiene base timina y el ARN tiene:</p>
+      <button onclick="verificarFinal('Uracilo')">Uracilo</button>
+      <button onclick="verificarFinal('Guanina')">Guanina</button>
+      <button onclick="verificarFinal('Citocina')">Citocina</button>
+      <p id="resultado5"></p>
+    </div>
+
+    <!-- Puntaje Final -->
+    <div id="puntajeFinal">Tu puntaje: 0/5</div>
+  </main>
+
+  <footer>
+    <p>Proyecto escolar - Biología 9° Grado | Créditos: Imágenes y videos libres de derechos</p>
+  </footer>
+
+  <script>
+    let puntaje = 0;
+
+    const actividadesRespondidas = {
+      act1: false,
+      act2: false,
+      act3: false,
+      act4_info: false,
+      act4_mensajero: false,
+      act5: false
+    };
+
+    function actualizarPuntaje(correcto){
+      if(correcto) {
+        puntaje++;
+        document.getElementById("puntajeFinal").textContent = `Tu puntaje: ${puntaje}/5`;
+      }
+    }
+
+    function verificar(respuesta){
+      let r = document.getElementById("resultado1");
+      if(actividadesRespondidas.act1) return;
+
+      if(respuesta === "A"){
+        r.textContent = "✅ Correcto, la vitamina A ayuda a la visión.";
+        r.style.color = "green";
+        actividadesRespondidas.act1 = true;
+        actualizarPuntaje(true);
+      } else {
+        r.textContent = "❌ Incorrecto, intenta otra vez.";
+        r.style.color = "red";
+      }
+    }
+
+    const adn = document.getElementById("adn");
+    const zonaADN = document.getElementById("zonaADN");
+    const r2 = document.getElementById("resultado2");
+
+    adn.addEventListener("dragstart", e => {
+      e.dataTransfer.setData("text", e.target.id);
+    });
+
+    zonaADN.addEventListener("dragover", e => e.preventDefault());
+    zonaADN.addEventListener("drop", e => {
+      e.preventDefault();
+      if(actividadesRespondidas.act2) return;
+      const data = e.dataTransfer.getData("text");
+      if(data === "adn"){
+        r2.textContent = "🎉 Bien hecho: El ADN guarda la información genética.";
+        r2.style.color = "green";
+        zonaADN.classList.add("correcto");
+        actividadesRespondidas.act2 = true;
+        actualizarPuntaje(true);
+      }
+    });
+
+    function verificarARN(respuesta){
+      let r = document.getElementById("resultado3");
+      if(actividadesRespondidas.act3) return;
+
+      if(respuesta.includes("ribosomas")){
+        r.textContent = "✅ Correcto: El ARN mensajero lleva la info a los ribosomas.";
+        r.style.color = "green";
+        actividadesRespondidas.act3 = true;
+        actualizarPuntaje(true);
+      } else {
+        r.textContent = "❌ Incorrecto.";
+        r.style.color = "red";
+      }
+    }
+
+    const info = document.getElementById("info");
+    const mensajero = document.getElementById("mensajero");
+    const zonaInfo = document.getElementById("zonaInfo");
+    const zonaMensajero = document.getElementById("zonaMensajero");
+    const r4 = document.getElementById("resultado4");
+
+    info.addEventListener("dragstart", e => {
+      e.dataTransfer.setData("text", e.target.id);
+    });
+
+    mensajero.addEventListener("dragstart", e => {
+      e.dataTransfer.setData("text", e.target.id);
+    });
+
+    zonaInfo.addEventListener("dragover", e => e.preventDefault());
+    zonaMensajero.addEventListener("dragover", e => e.preventDefault());
+
+    zonaInfo.addEventListener("drop", e => {
+      e.preventDefault();
+      if(actividadesRespondidas.act4_info) return;
+      const data = e.dataTransfer.getData("text");
+      if(data === "info"){
+        r4.textContent = "✅ Correcto: La información genética corresponde al ADN.";
+        r4.style.color = "green";
+        zonaInfo.classList.add("correcto");
+        actividadesRespondidas.act4_info = true;
+        actualizarPuntaje(true);
+      } else {
+        r4.textContent = "❌ Incorrecto.";
+        r4.style.color = "red";
+      }
+    });
+
+    zonaMensajero.addEventListener("drop", e => {
+      e.preventDefault();
+      if(actividadesRespondidas.act4_mensajero) return;
+      const data = e.dataTransfer.getData("text");
+      if(data === "mensajero"){
+        r4.textContent = "✅ Correcto: El ARN funciona como mensajero.";
+        r4.style.color = "green";
+        zonaMensajero.classList.add("correcto");
+        actividadesRespondidas.act4_mensajero = true;
+        actualizarPuntaje(true);
+      } else {
+        r4.textContent = "❌ Incorrecto.";
+        r4.style.color = "red";
+      }
+    });
+
+    function verificarFinal(respuesta){
+      let r = document.getElementById("resultado5");
+      if(actividadesRespondidas.act5) return;
+
+      if(respuesta === "Uracilo"){
+        r.textContent = "✅ Correcto, el ARN usa Uracilo en lugar de Timina.";
+        r.style.color = "green";
+        actividadesRespondidas.act5 = true;
+        actualizarPuntaje(true);
+      } else {
+        r.textContent = "❌ Incorrecto.";
+        r.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

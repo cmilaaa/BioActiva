@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Las Vitaminas - Biología 9°</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Segoe UI', Tahoma, Georgia;
+      margin: 0;
+      padding: 0;
+      background: #CCDBCC;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(90deg, #CCDBCC, #96A896);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 5px solid #819C81;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+    nav {
+      background: #96A896;
+      text-align: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #A3B5A3;
+    }
+    section {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 25px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2, h3 {
+      color: #4A6D4A;
+      margin-bottom: 10px;
+      text-decoration: underline;
+      text-decoration-color: #6A8579;
+      text-decoration-thickness: 3px;
+    }
+    ul, ol {
+      padding-left: 20px;
+    }
+    .imagen {
+      text-align: center;
+      margin: 15px 0;
+    }
+    .imagen img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .imagen img:hover {
+      transform: scale(1.05);
+    }
+    /* Actividades interactivas */
+    .actividad {
+      background: #9FB59F;
+      border-left: 5px solid #B2D6B2;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    footer {
+      background: #96A896;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer p {
+      margin: 0;
+    }
+    /* Tabla */
+    #vitaminas {
+      max-width: 740px;
+      margin: 12px 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    #vitaminas h2 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+    .resumen p {
+      margin: 6px 0;
+      line-height: 1.45;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th {
+      text-align: left;
+      background: #f2f2f2;
+    }
+    td, th {
+      padding: 8px;
+      border: 1px solid #ddd;
+      vertical-align: top;
+    }
+    caption {
+      text-align: left;
+      font-style: italic;
+      padding-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado principal -->
+  <header>
+    <h1>Las Vitaminas </h1>
+    <p>Proyecto de Biología - 9° Grado</p>
+  </header>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <a href="#introduccion">Introducción</a>
+    <a href="#clasificacion">Clasificación</a>
+    <a href="#funciones">Funciones</a>
+    <a href="#fuentes">Fuentes</a>
+    <a href="#exceso-vitaminas">Exceso</a>
+    <a href="#actividades">Actividades</a>
+  </nav>
+
+  <!-- Introducción -->
+  <section id="introduccion">
+    <h2>¿Qué son las Vitaminas?</h2>
+    <p>Las vitaminas son compuestos orgánicos esenciales que el cuerpo necesita en pequeñas cantidades para funcionar correctamente, ya que participan en procesos vitales como el metabolismo, la producción de energía, el crecimiento, la reparación de tejidos y el fortalecimiento del sistema inmunológico; dado que la mayoría no puede ser producida por el organismo, deben obtenerse a través de los alimentos, y tanto su deficiencia como su exceso pueden causar problemas de salud, por lo que una alimentación equilibrada y variada es fundamental para asegurar el correcto funcionamiento de órganos, tejidos y sistemas, mantener la salud general y prevenir enfermedades.</p>
+    <div class="imagen">
+      <img src="https://anadi.es/wp-content/uploads/2025/03/RUEDA-DE-VITAMINAS-1-scaled.jpg" alt="Rueda de vitaminas">
+    </div>
+  </section>
+
+  <!-- Clasificación -->
+  <section id="clasificacion">
+    <h2>Clasificación de las vitaminas</h2>
+    <div class="resumen">
+      <p><strong>Vitaminas liposolubles:</strong> Se disuelven en grasas...</p>
+      <p><strong>Vitaminas hidrosolubles:</strong> Se disuelven en agua...</p>
+    </div>
+    <table role="table">
+      <caption>Comparación rápida: liposolubles vs hidrosolubles</caption>
+      <thead>
+        <tr>
+          <th>Clasificación</th>
+          <th>Cómo son</th>
+          <th>Ejemplos</th>
+          <th>Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Liposolubles</strong></td>
+          <td>Se disuelven en grasas/aceites; se almacenan en hígado y tejido graso.</td>
+          <td>A, D, E, K</td>
+          <td>Riesgo de toxicidad si hay exceso.</td>
+        </tr>
+        <tr>
+          <td><strong>Hidrosolubles</strong></td>
+          <td>Se disuelven en agua; no se almacenan en grandes cantidades; se eliminan por orina.</td>
+          <td>Complejo B, C</td>
+          <td>Consumir regularmente.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Funciones -->
+  <section id="funciones">
+    <h2>Funciones</h2>
+    <h3>Vitaminas liposolubles</h3>
+    <ul>
+      <li><strong>Vitamina A:</strong> Visión y sistema inmune.</li>
+      <li><strong>Vitamina D:</strong> Regulación de calcio y fósforo.</li>
+      <li><strong>Vitamina E:</strong> Antioxidante.</li>
+      <li><strong>Vitamina K:</strong> Coagulación sanguínea.</li>
+    </ul>
+    <h3>Vitaminas hidrosolubles</h3>
+    <ul>
+      <li><strong>B1:</strong> Energía y sistema nervioso.</li>
+      <li><strong>B2:</strong> Metabolismo y salud de piel.</li>
+      <li><strong>B3:</strong> Producción de energía.</li>
+      <li><strong>B6:</strong> Síntesis de neurotransmisores.</li>
+      <li><strong>B12:</strong> Formación de glóbulos rojos.</li>
+      <li><strong>Ácido fólico:</strong> Síntesis de ADN.</li>
+      <li><strong>Vitamina C:</strong> Antioxidante y sistema inmune.</li>
+    </ul>
+  </section>
+
+  <!-- Fuentes -->
+  <section id="fuentes">
+    <h2>Fuentes</h2>
+    <h3>Vitaminas liposolubles</h3>
+    <ul>
+      <li><strong>A:</strong> Hígado, zanahorias.</li>
+      <li><strong>D:</strong> Pescados grasos, sol.</li>
+      <li><strong>E:</strong> Aceites, frutos secos.</li>
+      <li><strong>K:</strong> Verduras verdes.</li>
+    </ul>
+    <h3>Vitaminas hidrosolubles</h3>
+    <ul>
+      <li><strong>B1:</strong> Cereales, cerdo.</li>
+      <li><strong>B2:</strong> Lácteos, vegetales verdes.</li>
+      <li><strong>B3:</strong> Carnes, frutos secos.</li>
+      <li><strong>B6:</strong> Plátano, pollo.</li>
+      <li><strong>B12:</strong> Carnes, lácteos.</li>
+      <li><strong>Ácido fólico:</strong> Verduras, legumbres.</li>
+      <li><strong>C:</strong> Cítricos, kiwi.</li>
+    </ul>
+  </section>
+
+  <!-- Exceso -->
+  <section id="exceso-vitaminas">
+    <h2>Exceso de vitaminas</h2>
+    <h3>Vitaminas liposolubles (A, D, E, K)</h3>
+    <p>👉 Se acumulan en el hígado y tejidos grasos, así que es más fácil intoxicarse con ellas.</p>
+    <ul>
+      <li><strong>Vitamina A:</strong> Náuseas, mareos, dolor de cabeza, daño hepático, problemas en la piel y, en casos graves, malformaciones en el feto.</li>
+      <li><strong>Vitamina D:</strong> Exceso de calcio en la sangre (hipercalcemia), calcificación de órganos (riñones, corazón), debilidad, vómitos y daño renal.</li>
+      <li><strong>Vitamina E:</strong> Hemorragias (porque afecta la coagulación), debilidad, fatiga, visión borrosa y problemas digestivos.</li>
+      <li><strong>Vitamina K:</strong> Ictericia (piel amarillenta), daño hepático y problemas en la coagulación sanguínea (puede causar trombos).</li>
+    </ul>
+
+    <h3>Vitaminas hidrosolubles (C y grupo B)</h3>
+    <p>👉 Como se eliminan en la orina, el exceso es menos común, pero sí puede causar problemas si la ingesta es muy alta.</p>
+    <ul>
+      <li><strong>Vitamina C:</strong> Cálculos renales, diarrea, dolor abdominal, náuseas y gastritis.</li>
+      <li><strong>Vitamina B6 (piridoxina):</strong> Daño en nervios (neuropatía), entumecimiento y pérdida de sensibilidad en manos y pies.</li>
+      <li><strong>Vitamina B3 (niacina):</strong> Enrojecimiento de la piel, picazón, daño hepático y problemas gastrointestinales.</li>
+      <li><strong>Vitamina B12:</strong> Es raro, pero puede dar acné, problemas cutáneos y alteraciones digestivas.</li>
+      <li><strong>Ácido fólico:</strong> Enmascara la deficiencia de vitamina B12, lo que puede derivar en daños neurológicos.</li>
+    </ul>
+  </section>
+
+  <!-- Actividades -->
+  <section id="actividades">
+    <h2>Actividades Interactivas</h2>
+    <div class="actividad">1. ¿Qué problemas de salud aparecen cuando hay deficiencia de Vitamina A?</div>
+    <div class="actividad">2. Explica cuáles son las consecuencias negativas de un exceso de Vitamina K.</div>
+    <div class="actividad">3. Determina si las vitaminas E, B6, D y ácido fólico son liposolubles o hidrosolubles.</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Proyecto escolar - Biología 9° Grado | Créditos: Imágenes libres de derechos</p>
+  </footer>
+</body>
+</html>
