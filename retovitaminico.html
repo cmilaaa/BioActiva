@@ -13,23 +13,6 @@
       color: #333;
     }
 
-    /* Menú global */
-    .global-nav {
-      background: #FFF8D4;
-      padding: 10px;
-      text-align: center;
-    }
-    .global-nav a {
-      color: #c99800;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .global-nav a:hover {
-      text-decoration: underline;
-      color: #e1a600;
-    }
-
     header {
       background: #F2D979;
       color: white;
@@ -48,12 +31,36 @@
       font-size: 1.2rem;
     }
 
+    /* Menú global */
+    .menu-global {
+      background: #EEF6F7;
+      text-align: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      border-bottom: 3px solid #ddd;
+    }
+
+    .menu-global a {
+      color: #98B9C3;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .menu-global a:hover {
+      color: #6fa5af;
+    }
+
+    /* Menú interno */
     nav {
       background: #FFF8D4;
       text-align: center;
       padding: 15px;
       position: sticky;
-      top: 0;
+      top: 60px; /* debajo del global */
       z-index: 100;
     }
 
@@ -131,23 +138,25 @@
 </head>
 <body>
 
-  <!-- Menú global -->
-  <div class="global-nav">
-    <a href="index.html">Inicio</a>
-    <a href="vitaminas.html">Vitaminas</a>
-    <a href="adn.html">ADN</a>
-    <a href="arn.html">ARN</a>
-    <a href="jugos.html">Jugos</a>
-    <a href="actividades.html">Actividades</a>
-  </div>
-
   <!-- Encabezado principal -->
   <header>
     <h1>Jugos que cambian con el tiempo</h1>
     <p>Proyecto de Biología - 9° Grado</p>
   </header>
 
-  <!-- Menú de navegación interno -->
+  <!-- Menú global -->
+  <div class="menu-global">
+    <a href="index.html">Inicio</a>
+    <a href="vitaminas.html">Vitaminas</a>
+    <a href="retovitaminico.html">Reto Vitamínico</a>
+    <a href="adn.html">ADN</a>
+    <a href="arn.html">ARN</a>
+    <a href="videos.html">Videos</a>
+    <a href="actividades.html">Actividades</a>
+    <a href="jugos.html">Jugos</a>
+  </div>
+
+  <!-- Menú interno (solo para esta página) -->
   <nav>
     <a href="#preguntadeinvestigacion">Pregunta de Investigación</a>
     <a href="#variablescontroladas">Variables Controladas</a>
