@@ -28,6 +28,25 @@
       margin-top: 10px;
       font-size: 1.2rem;
     }
+
+    /* Menú global */
+    .global-nav {
+      background: #DDE8EB;
+      padding: 10px;
+      text-align: center;
+    }
+    .global-nav a {
+      color: #98B9C3;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .global-nav a:hover {
+      text-decoration: underline;
+      color: #0077b6;
+    }
+
+    /* Menú interno por secciones */
     nav {
       background: #96A896;
       text-align: center;
@@ -46,6 +65,7 @@
     nav a:hover {
       color: #A3B5A3;
     }
+
     section {
       max-width: 1000px;
       margin: 20px auto;
@@ -78,6 +98,7 @@
     .imagen img:hover {
       transform: scale(1.05);
     }
+
     /* Actividades interactivas */
     .actividad {
       background: #9FB59F;
@@ -86,6 +107,8 @@
       margin: 10px 0;
       border-radius: 8px;
     }
+
+    /* Footer */
     footer {
       background: #96A896;
       color: white;
@@ -96,6 +119,7 @@
     footer p {
       margin: 0;
     }
+
     /* Tabla */
     #vitaminas {
       max-width: 740px;
@@ -132,13 +156,25 @@
   </style>
 </head>
 <body>
+
+  <!-- Menú global con enlaces a todas las páginas -->
+  <div class="global-nav">
+    <a href="index.html">Inicio</a>
+    <a href="vitaminas.html">Vitaminas</a>
+    <a href="retovitaminico.html">Reto Vitamínico</a>
+    <a href="adn.html">ADN</a>
+    <a href="arn.html">ARN</a>
+    <a href="videos.html">Videos</a>
+    <a href="actividades.html">Actividades</a>
+  </div>
+
   <!-- Encabezado principal -->
   <header>
-    <h1>Las Vitaminas </h1>
+    <h1>Las Vitaminas</h1>
     <p>Proyecto de Biología - 9° Grado</p>
   </header>
 
-  <!-- Menú de navegación -->
+  <!-- Menú de navegación por secciones -->
   <nav>
     <a href="#introduccion">Introducción</a>
     <a href="#clasificacion">Clasificación</a>
@@ -242,19 +278,18 @@
     <p>👉 Se acumulan en el hígado y tejidos grasos, así que es más fácil intoxicarse con ellas.</p>
     <ul>
       <li><strong>Vitamina A:</strong> Náuseas, mareos, dolor de cabeza, daño hepático, problemas en la piel y, en casos graves, malformaciones en el feto.</li>
-      <li><strong>Vitamina D:</strong> Exceso de calcio en la sangre (hipercalcemia), calcificación de órganos (riñones, corazón), debilidad, vómitos y daño renal.</li>
-      <li><strong>Vitamina E:</strong> Hemorragias (porque afecta la coagulación), debilidad, fatiga, visión borrosa y problemas digestivos.</li>
-      <li><strong>Vitamina K:</strong> Ictericia (piel amarillenta), daño hepático y problemas en la coagulación sanguínea (puede causar trombos).</li>
+      <li><strong>Vitamina D:</strong> Exceso de calcio en la sangre (hipercalcemia), calcificación de órganos, debilidad, vómitos y daño renal.</li>
+      <li><strong>Vitamina E:</strong> Hemorragias, debilidad, fatiga, visión borrosa y problemas digestivos.</li>
+      <li><strong>Vitamina K:</strong> Ictericia, daño hepático y problemas en la coagulación sanguínea.</li>
     </ul>
-
     <h3>Vitaminas hidrosolubles (C y grupo B)</h3>
     <p>👉 Como se eliminan en la orina, el exceso es menos común, pero sí puede causar problemas si la ingesta es muy alta.</p>
     <ul>
       <li><strong>Vitamina C:</strong> Cálculos renales, diarrea, dolor abdominal, náuseas y gastritis.</li>
-      <li><strong>Vitamina B6 (piridoxina):</strong> Daño en nervios (neuropatía), entumecimiento y pérdida de sensibilidad en manos y pies.</li>
-      <li><strong>Vitamina B3 (niacina):</strong> Enrojecimiento de la piel, picazón, daño hepático y problemas gastrointestinales.</li>
-      <li><strong>Vitamina B12:</strong> Es raro, pero puede dar acné, problemas cutáneos y alteraciones digestivas.</li>
-      <li><strong>Ácido fólico:</strong> Enmascara la deficiencia de vitamina B12, lo que puede derivar en daños neurológicos.</li>
+      <li><strong>Vitamina B6:</strong> Daño en nervios, entumecimiento y pérdida de sensibilidad.</li>
+      <li><strong>Vitamina B3:</strong> Enrojecimiento de la piel, picazón, daño hepático y problemas gastrointestinales.</li>
+      <li><strong>Vitamina B12:</strong> Puede causar acné, problemas cutáneos y alteraciones digestivas.</li>
+      <li><strong>Ácido fólico:</strong> Enmascara la deficiencia de B12, pudiendo derivar en daños neurológicos.</li>
     </ul>
   </section>
 
