@@ -16,11 +16,11 @@
     }
 
     header {
-      background: #B5D9E6; /* color del encabezado */
+      background: #B5D9E6;
       color: white;
       padding: 40px 20px;
       text-align: center;
-      border-bottom: 5px solid #80A0AB; /* franja cambiada */
+      border-bottom: 5px solid #80A0AB;
     }
 
     header h1 {
@@ -43,7 +43,7 @@
     }
 
     nav a {
-      color: #80A0AB; /* enlaces con el nuevo color */
+      color: #80A0AB;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
@@ -100,9 +100,59 @@
     footer p {
       margin: 0;
     }
+
+    /* Menú global adicional */
+    .global-nav {
+      background: #DDE8EB;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .global-nav a {
+      color: #98B9C3;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .global-nav a:hover {
+      text-decoration: underline;
+      color: #0077b6;
+    }
+
+    .bottom-nav {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .bottom-nav a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 8px 15px;
+      background: #DDE8EB;
+      color: #333;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .bottom-nav a:hover {
+      background: #c5d2d5;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Menú global con enlaces a todas las páginas -->
+  <div class="global-nav">
+    <a href="index.html">Inicio</a>
+    <a href="vitaminas.html">Vitaminas</a>
+    <a href="retovitaminico.html">Reto Vitamínico</a>
+    <a href="adn.html">ADN</a>
+    <a href="arn.html">ARN</a>
+    <a href="videos.html">Videos</a>
+    <a href="actividades.html">Actividades</a>
+  </div>
 
   <!-- Encabezado principal -->
   <header>
@@ -110,7 +160,7 @@
     <p>Proyecto de Biología - 9° Grado</p>
   </header>
 
-  <!-- Menú de navegación -->
+  <!-- Menú de navegación interno -->
   <nav>
     <a href="#bioactiva">BioActiva</a>
     <a href="#sobrenosotros">Sobre nosotros</a>
@@ -182,3 +232,4 @@
 
 </body>
 </html>
+
