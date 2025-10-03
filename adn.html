@@ -14,6 +14,23 @@
       color: #333333;
     }
 
+    /* Menú global */
+    .global-nav {
+      background: #DDE8EB;
+      padding: 10px;
+      text-align: center;
+    }
+    .global-nav a {
+      color: #98B9C3;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .global-nav a:hover {
+      text-decoration: underline;
+      color: #0077b6;
+    }
+
     header {
       background: #D1C5E0; /* Header */
       color: white;
@@ -32,8 +49,9 @@
       font-size: 1.2rem;
     }
 
+    /* Menú interno por secciones */
     nav {
-      background: #B0A3BF; /* Menú */
+      background: #B0A3BF;
       text-align: center;
       padding: 15px;
       position: sticky;
@@ -116,13 +134,24 @@
 </head>
 <body>
 
+  <!-- Menú global -->
+  <div class="global-nav">
+    <a href="index.html">Inicio</a>
+    <a href="vitaminas.html">Vitaminas</a>
+    <a href="retovitaminico.html">Reto Vitamínico</a>
+    <a href="adn.html">ADN</a>
+    <a href="arn.html">ARN</a>
+    <a href="videos.html">Videos</a>
+    <a href="actividades.html">Actividades</a>
+  </div>
+
   <!-- Encabezado principal -->
   <header>
     <h1>ADN (Ácido Desoxirribonucleico)</h1> 
     <p>Proyecto de Biología - 9° Grado</p>
   </header>
 
-  <!-- Menú de navegación -->
+  <!-- Menú interno por secciones -->
   <nav>
     <a href="#introduccion">Introducción</a> 
     <a href="#caracteristicas">Características</a> 
