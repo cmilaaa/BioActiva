@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Actividades Interactivas</title>
+  <title>Actividades Interactivas - Biología 9°</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,37 +15,44 @@
       align-items: center;
     }
 
-    header, footer {
+    header {
       width: 100%;
+      background-color: #B4CFCB;
       color: white;
       text-align: center;
       padding: 15px 0;
     }
 
-    header {
-      background-color: #B4CFCB;
+    header h1 {
+      margin: 0;
     }
 
-    nav {
+    header h2 {
+      margin: 5px 0 0 0;
+      font-weight: normal;
+    }
+
+    /* Menú global */
+    nav.global {
       background-color: #CAE3E2;
       width: 100%;
       text-align: center;
       padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    nav a {
+    nav.global a {
       color: #2c6e6f;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
 
-    h1, h2 {
-      margin: 0;
-    }
-
-    h2 {
-      color: #2c6e6f;
+    nav.global a:hover {
+      color: #145252;
     }
 
     main {
@@ -114,7 +121,12 @@
     }
 
     footer {
-      background-color: #2c6e6f; /* color oscuro */
+      background-color: #2c6e6f;
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -124,8 +136,15 @@
     <h2>Proyecto de Biología - 9° Grado</h2>
   </header>
 
-  <nav>
+  <!-- Menú global -->
+  <nav class="global">
+    <a href="vitaminas.html">Vitaminas</a>
+    <a href="adn.html">ADN</a>
+    <a href="arn.html">ARN</a>
+    <a href="comparacion.html">ADN vs ARN</a>
+    <a href="jugos.html">Jugos</a>
     <a href="#act1">Actividades</a>
+    <a href="videos.html">Videos</a>
   </nav>
 
   <main>
